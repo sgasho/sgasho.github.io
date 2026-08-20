@@ -1,0 +1,30 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* Slightly brighter charcoal background for dark mode. */
+:root[data-bs-theme='dark'] {
+  --main-bg: rgb(36 37 42);
+  --sidebar-bg: rgb(58 58 62);
+  --sidebar-border-color: rgb(70 70 75);
+  --topbar-bg: rgb(36 37 42 / 64%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-bs-theme]) {
+    --main-bg: rgb(36 37 42);
+    --sidebar-bg: rgb(58 58 62);
+    --sidebar-border-color: rgb(70 70 75);
+    --topbar-bg: rgb(36 37 42 / 64%);
+  }
+}

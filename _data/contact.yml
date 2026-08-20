@@ -3,12 +3,13 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: zenn
+  icon: "fas fa-book-open"
+  url: "https://zenn.dev/sgasho"
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+- type: gsoc
+  icon: "fas fa-code"
+  url: "https://summerofcode.withgoogle.com/programs/2026/projects/Wg1mCCHL"
 
 - type: rss
   icon: "fas fa-rss"
